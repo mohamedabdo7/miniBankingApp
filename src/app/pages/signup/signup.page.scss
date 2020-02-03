@@ -1,0 +1,47 @@
+ion-toolbar {
+    color: #FFF;
+    font-family: "El Messiri", sans-serif;
+}
+
+ion-content{
+
+    .content{
+        background-image: linear-gradient(cyan, yellow);
+        width: 85%;
+        height: 540px;
+        background-color: white;
+        margin: 5% auto;
+        border-radius: 12px;
+        box-shadow: 5px 5px 16px 6px darkgrey;
+        display: flex;
+        flex-direction: column;
+        p{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "El Messiri", sans-serif;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            // margin-top: 10%;
+            ion-item{
+                margin-top: 6%;
+                ion-label{
+                    font-family: "El Messiri", sans-serif;
+                }
+            }
+            div{
+                font-family: "El Messiri", sans-serif;
+            }
+            ion-button{
+                margin-top: 10%;
+            }
+        }
+        p{
+            height: 10%;
+        }
+    }
+    
+}

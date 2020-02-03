@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">My Transfers</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="content">
+    
+    <ul *ngFor="let item of transfers; let i = index">
+      <li>Transfer: {{item}}</li>
+    </ul>
+
+  </div>
+
+</ion-content>

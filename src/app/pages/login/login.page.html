@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="content">
+
+    <p>Login</p>
+
+    <form class="form" [formGroup]="loginForm">
+      
+      <ion-item>
+        <ion-label  position="floating" color="primary">ID</ion-label>
+        <ion-input type="text" formControlName="ID" class="form-controll" required></ion-input>
+      </ion-item>
+      <div class="validation-errors">
+        <ng-container *ngFor="let validation of validation_messages.ID">
+          <div class="error-message" *ngIf="loginForm.get('ID').hasError(validation.type) && (loginForm.get('ID').dirty || loginForm.get('ID').touched)">
+            {{ validation.message }}
+          </div>
+        </ng-container>
+      </div>
+
+      <ion-item>
+        <ion-label  position="floating" color="primary">password</ion-label>
+        <ion-input type="password" formControlName="password" class="form-controll" required></ion-input>
+      </ion-item>
+      <div class="validation-errors">
+        <ng-container *ngFor="let validation of validation_messages.password">
+          <div class="error-message" *ngIf="loginForm.get('password').hasError(validation.type) && (loginForm.get('password').dirty || loginForm.get('password').touched)">
+            {{ validation.message }}
+          </div>
+        </ng-container>
+      </div>
+
+      <ion-button id="logbtn" class="submit-btn" type="submit" (click)="login()">Log In</ion-button>
+
+    </form>
+
+    <p class="go-to-register">
+      No account yet? <br><a (click)="goToRegisterPage()">Create an account.</a>
+    </p>
+
+  </div>
+
+</ion-content>

@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color='primary'>
+    <ion-title class="ion-text-center">Account Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="content">
+    <div id="accName"><b>{{ accDetails.accountName }}</b></div>
+
+    <div id="accInfo">
+      <ul>
+        <li>Bank Name: {{myBankName}}</li>
+        <li>Account Number: {{ accDetails.accountNum }}</li>
+        <li >Balance:   {{balance}}    </li>
+      </ul>
+    </div>
+
+    <div id="input">
+      <form class="form" [formGroup]="transferForm">
+        <ion-label>Transfer Balance</ion-label>
+        <ion-input type="number" formControlName="amount" class="form-control" placeholder="enter amount">
+          <ion-icon name="card"></ion-icon>
+        </ion-input>
+        <ion-input type="number" formControlName="password" class="form-control" required placeholder="enter password">
+          <ion-icon name="card"></ion-icon>
+        </ion-input>
+        <ion-button color="secondary" (click)="transfer()">transfer</ion-button>
+      </form>
+      
+    </div>
+
+    <ion-button color="primary" (click)="goTransfers()">monthly list</ion-button>
+
+  </div>
+
+  
+  
+
+</ion-content>

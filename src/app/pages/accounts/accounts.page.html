@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-icon name="log-out" slot="start" (click)="logOut()"></ion-icon>
+    <ion-title class="ion-text-center">My Accounts</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <div class="content">
+    <div class="accounts">
+
+      <div class="account" *ngFor="let item of userAccounts">
+
+        <div>
+          <p>{{item.accountName}}</p>
+          <ion-button color="secondary" (click)="details(item.id)">Details</ion-button>  
+        </div>
+        
+      </div>
+
+    </div>
+  </div>
+
+  
+
+</ion-content>

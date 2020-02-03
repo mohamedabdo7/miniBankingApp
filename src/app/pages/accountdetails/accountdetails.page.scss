@@ -1,0 +1,45 @@
+ion-toolbar {
+    color: #FFF;
+    font-family: "El Messiri", sans-serif;
+}
+
+ion-content{
+
+    .content{
+        // background-image: linear-gradient(cyan, yellow);
+        width: 85%;
+        height: 80%;
+        background-color: white;
+        margin: 15% auto;
+        border-radius: 12px;
+        box-shadow: 5px 5px 16px 6px darkgrey;
+        display: flex;
+        flex-direction: column;
+        
+        #accName{
+            height: 15%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #accInfo{
+            ul{
+                li{
+                    padding-top: 30px;
+                }
+            }
+        }
+        #input{
+            padding: 10%;
+            ion-input{
+                border: 1px solid;
+                // width: 80%;
+                // background: #06d5ed;
+                // color: aliceblue;
+            }
+        }
+        
+    
+    }
+    
+}
